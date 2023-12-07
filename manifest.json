@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Block Ads Extension",
+  "version": "1.0",
+  "description": "Block elements with specific classes containing 'ad', 'advertisement', or 'publicite'.",
+  "permissions": ["activeTab", "webRequest", "webRequestBlocking", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["page.js"]
+    }
+  ]
+}
